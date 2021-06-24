@@ -2,19 +2,20 @@
     <img src="./docs/logoMagix.png" width="600"><br/>
 </p>
 
-## Introduction
+## 🧙‍♂️ Introduction
 
-Fast annimation creation only with javascript
+🪄✨ Fast annimation creation only with javascript 🪄✨
 
-## Install
-
+## 🧙‍♂️ Install
+⭐️
+`npm i magixjs --save`
 <!-- Copy and past this command on your terminal
 
 ```
 git clone https://github.com/jviatge/Toolsdev && cd Toolsdev && sh install.sh
 ``` -->
 
-## Usage
+## 🧙‍♂️ Usage
 
 
 Example:

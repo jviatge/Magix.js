@@ -122,4 +122,4 @@ function Magix(params) {
     events(params)
 }
 
-export default Magix;
+module.exports.Magix = Magix;

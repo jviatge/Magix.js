@@ -1,0 +1,33 @@
+{
+  "name": "magixjs",
+  "version": "1.0.0",
+  "description": "Fast annimation creation only with javascript",
+  "umd:main": "dist/Magix.min.js",
+  "module": "dist/Magix.es.js",
+  "main": "dist/Magix.js",
+  "umd:name": "Magix",
+  "directories": {
+    "doc": "docs",
+    "example": "example",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jviatge/Majixjs.git"
+  },
+  "keywords": [
+    "event",
+    "anime",
+    "animation",
+    "javascript"
+  ],
+  "author": "jviatge",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jviatge/Majixjs/issues"
+  },
+  "homepage": "https://github.com/jviatge/Majixjs#readme"
+}

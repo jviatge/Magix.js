@@ -8,7 +8,7 @@
 
 ## 🧙‍♂️ Install
 ⭐️
-`npm i magixjs --save`
+`npm i m4gixjs --save`
 <!-- Copy and past this command on your terminal
 
 ```

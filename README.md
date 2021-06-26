@@ -9,17 +9,48 @@
 ## 🧙‍♂️ Install
 ⭐️
 `npm i m4gixjs --save`
-<!-- Copy and past this command on your terminal
-
-```
-git clone https://github.com/jviatge/Toolsdev && cd Toolsdev && sh install.sh
-``` -->
 
 ## 🧙‍♂️ Usage
 
-
-Example:
+Import module:
 
 ```JAVASCRIPT
-
+import Magix from 'm4gixjs'
 ```
+
+Example basic usage:
+
+```JAVASCRIPT
+Magix({
+    event:'click',      
+    options:{
+        targets:'#test',
+    }, 
+    animes:[
+        {
+            targets:'#test',        
+            actions:{
+                'background-color':['#00ff0c','#ffff00']
+            },
+        }
+    ],
+})
+```
+
+### Base
+
+------------ | -------------
+`event`| Content from cell 2
+`actions` | Content in the second column
+`actions` | Content in the second column
+`actions` | Content in the second column
+`actions` | Content in the second column
+
+
+### 🪄 animes
+
+- `targets`
+- `actions`
+- `order`
+- `child`
+- `targets`

@@ -39,6 +39,7 @@ Magix({
 
 ### Base
 
+Name object | Second Header
 ------------ | -------------
 `event`| Content from cell 2
 `actions` | Content in the second column

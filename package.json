@@ -1,6 +1,6 @@
 {
   "name": "m4gixjs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Fast annimation creation only with javascript",
   "umd:main": "dist/Magix.min.js",
   "module": "dist/Magix.es.js",

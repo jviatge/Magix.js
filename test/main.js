@@ -1,3 +1,9 @@
+function getPosition(element) {
+    var topPos = element.getBoundingClientRect().top + window.scrollY;
+    var leftPos = element.getBoundingClientRect().left + window.scrollX;
+    return { top: topPos, left: leftPos}
+}
+
 function targets(targets){
     if(Array.isArray(targets)){
         let arrTargets = Array()
@@ -28,11 +34,23 @@ function transition(animes) {
     })
 }
 
-function style(animes) {
-    for (const property in animes.actions) {
-        animes.targets.forEach(target => {
-            target.style[property] = animes.actions[property][1]
-        })
+function style(anime, i) {
+    for (const property in anime.actions) {  
+        anime.targets.forEach(target => {
+            switch (anime.actions[property][i]) {
+                
+                case "targets-pos-t":
+                    target.style.top = getPosition(target).top + 'px'
+                    break;
+
+                case "targets-pos-l":
+                    target.style.left = getPosition(target).left + 'px'
+                    break;
+
+                default:
+                    target.style[property] = anime.actions[property][i]
+                    break;
+        }});    
     }
 }
 
@@ -41,15 +59,9 @@ function init(params) {
     params.animes.forEach(anime => {
         !anime.order ? anime.order = 0 : null
 
-        // target 
-        for (const property in anime.actions) {    
-            anime.targets.forEach(target => {
-                target.style[property] = anime.actions[property][0]
-            });        
-        }
-
+        style(anime, 0)
     });
-
+    // order to order
     params.animes.sort((a,b) => a.order - b.order)
 }
 
@@ -96,7 +108,7 @@ function events(params) {
                         setTimeout(function(){
 
                             transition(animes)
-                            style(animes)
+                            style(animes, 1)
 
                         }, timeOut(animes, params))
                     })
@@ -167,9 +179,12 @@ Magix({
             order: 0
         },
         {
-            targets:'#opening',  
+            targets:'.opening', 
+            child: true,
             time: 0.7,             
             actions:{
+                'top':['targets-pos-t','50%'],
+                'left':['targets-pos-l','50%'],
                 'height':['0%','100%'],
                 'width':['0%','100%']
             },
@@ -187,6 +202,8 @@ Magix({
         },
     ],
 })
+
+// targets-pos-t / targets-pos-l = return actualy position of element (px)
 
 // Magix({
 //     event:'click',      // hover / key / scroll / in / out

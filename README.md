@@ -37,21 +37,33 @@ Magix({
 })
 ```
 
-### Base
+### 🪄 Base
 
 Name object | Second Header
 ------------ | -------------
-`event`| Content from cell 2
-`actions` | Content in the second column
-`actions` | Content in the second column
-`actions` | Content in the second column
-`actions` | Content in the second column
+`event`| `click` #require
+`options` |[options](###-🪄-options)
+`animes` |[animes](###-🪄-animes)
 
+### 🪄 options
+
+Name object | Second Header
+------------ | -------------
+`targets` | Content from cell 2
+`actions` | Content from cell 2
+`order` | Content from cell 2
+`child` | Content from cell 2
+`targets` | Content from cell 2
 
 ### 🪄 animes
 
-- `targets`
-- `actions`
-- `order`
-- `child`
-- `targets`
+Name object | Second Header
+------------ | -------------
+`targets` | Content from cell 2
+`actions` | Content from cell 2
+`order` | Content from cell 2
+`child` | Content from cell 2
+`targets` | Content from cell 2
+`timer` | Content from cell 2
+
+

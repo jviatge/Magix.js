@@ -39,11 +39,11 @@ Magix({
 
 ### 🪄 Base
 
-Name object | Second Header
------------- | -------------
-`event`| `click` #require
-`options` |[options](#-options)
-`animes` |[animes](#-animes)
+Name object | Available | Infos
+------------ | ------------- | -------------
+`event` | `click` | #require
+`options` | [options](#-options) |
+`animes` | [animes](#-animes) |
 
 ### 🪄 options
 

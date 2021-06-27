@@ -46,7 +46,6 @@ Name object | Second Header
 `animes` |[animes](#-animes)
 
 ### 🪄 options
-(#-options)
 
 Name object | Second Header
 ------------ | -------------
@@ -57,7 +56,6 @@ Name object | Second Header
 `targets` | Content from cell 2
 
 ### 🪄 animes
-(#-animes)
 
 Name object | Second Header
 ------------ | -------------

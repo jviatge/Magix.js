@@ -1,6 +1,6 @@
 {
   "name": "m4gixjs",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Fast annimation creation only with javascript",
   "umd:main": "dist/Magix.min.js",
   "module": "dist/Magix.es.js",
@@ -15,7 +15,8 @@
   "scripts": {
     "start": "tsc && node dist/Magix.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "tsc --watch -p ."
+    "dev": "tsc --watch -p .",
+    "pub": "npm publish --access public"
   },
   "repository": {
     "type": "git",

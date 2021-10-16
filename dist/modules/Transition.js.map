@@ -1,0 +1,1 @@
+{"version":3,"file":"Transition.js","sourceRoot":"","sources":["../../src/modules/Transition.ts"],"names":[],"mappings":";;;AAEA,SAAgB,UAAU,CAAC,KAAY;IACnC,KAAK,CAAC,WAAW,GAAG,SAAO,KAAK,CAAC,IAAI,kBAAe,CAAA;IACpD,KAAK,CAAC,OAAO,CAAC,OAAO,CAAC,UAAC,MAAU;QAC7B,MAAM,CAAC,KAAK,CAAC,UAAU,GAAG,KAAK,CAAC,WAAW,CAAA;IAC/C,CAAC,CAAC,CAAA;AACN,CAAC;AALD,gCAKC"}

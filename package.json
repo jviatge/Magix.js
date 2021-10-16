@@ -5,6 +5,7 @@
   "umd:main": "dist/Magix.min.js",
   "module": "dist/Magix.es.js",
   "main": "dist/Magix.js",
+  "types": "lib",
   "umd:name": "Magix",
   "directories": {
     "doc": "docs",
@@ -12,7 +13,9 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "tsc && node dist/Magix.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tsc --watch -p ."
   },
   "repository": {
     "type": "git",

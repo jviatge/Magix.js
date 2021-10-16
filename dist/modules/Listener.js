@@ -16,10 +16,12 @@ var Listener = /** @class */ (function () {
                 this.click();
                 break;
             case 'hover':
+                this.hover();
                 break;
             case 'key':
                 break;
             case 'scroll':
+                // https://www.youtube.com/watch?v=55NsKxpUYjQ&t=123s
                 break;
         }
     };
@@ -28,6 +30,18 @@ var Listener = /** @class */ (function () {
         var _this = this;
         this.obj._target.forEach(function (target) {
             target.addEventListener('click', function (e) {
+                _this.action();
+            });
+        });
+    };
+    // Hover
+    Listener.prototype.hover = function () {
+        var _this = this;
+        this.obj._target.forEach(function (target) {
+            target.addEventListener("mouseover", function (e) {
+                _this.action();
+            });
+            target.addEventListener("mouseout", function (e) {
                 _this.action();
             });
         });

@@ -4,6 +4,7 @@ export declare class Listener {
     constructor(obj: obj);
     private create;
     private click;
+    private hover;
     private action;
 }
 //# sourceMappingURL=Listener.d.ts.map

@@ -23,12 +23,14 @@ export class Listener{
                     break;
         
                 case 'hover':
+                    this.hover()
                     break;
         
                 case 'key':
                     break;
         
                 case 'scroll':
+                    // https://www.youtube.com/watch?v=55NsKxpUYjQ&t=123s
                     break;
             }
 
@@ -38,11 +40,26 @@ export class Listener{
     private click(){
         
         this.obj._target.forEach((target:any) => {
+            
             target.addEventListener('click',(e: any)=>{ 
-
                this.action()
-
             })
+        });
+    }
+
+    // Hover
+    private hover(){
+        
+        this.obj._target.forEach((target:any) => {
+
+            target.addEventListener("mouseover", (e: any) => {
+                this.action()
+            });
+
+            target.addEventListener("mouseout", (e: any) => {
+                this.action()
+            });
+
         });
         
     }
@@ -60,8 +77,7 @@ export class Listener{
 
         // toogle end 
         Toggle(this.obj)
-
-   }
+    }
 
 }
 

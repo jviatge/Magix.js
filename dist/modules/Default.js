@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.hover = exports.click = exports.Init = exports.defaultValue = void 0;
+exports.scroll = exports.hover = exports.click = exports.Init = exports.defaultValue = void 0;
 exports.defaultValue = {
     time: 0.8,
     order: 0,
@@ -34,4 +34,10 @@ function hover(hover) {
     return hover;
 }
 exports.hover = hover;
+function scroll(scroll) {
+    // typeof scroll === 'undefined' ? scroll = {
+    // } : null
+    return scroll;
+}
+exports.scroll = scroll;
 //# sourceMappingURL=Default.js.map

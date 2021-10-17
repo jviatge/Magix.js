@@ -1,9 +1,10 @@
-import { Click, Hover, obj } from "../types";
-import { click, hover } from "./Default";
+import { Click, Hover, Scroll, obj } from "../types";
+import { click, hover, scroll } from "./Default";
 import { Transition } from "./Transition";
 import { Action } from "./Action";
 import { Toggle } from './Toggle';
 import { toggleOut } from "./Options";
+import { Play } from "./Play";
 
 export class Listener{
 
@@ -18,24 +19,23 @@ export class Listener{
     private create(){
 
         // list targets   
-            switch (this.obj.event) {
-    
-                case 'click':
+        switch (this.obj.event) {
 
-                    this.click()
-                    break;
-        
-                case 'hover':
-                    this.hover()
-                    break;
-        
-                case 'key':
-                    break;
-        
-                case 'scroll':
-                    // https://www.youtube.com/watch?v=55NsKxpUYjQ&t=123s
-                    break;
-            }
+            case 'click':
+                this.click()
+                break;
+    
+            case 'hover':
+                this.hover()
+                break;
+    
+            case 'key':
+                break;
+    
+            case 'scroll':
+                this.scroll()
+                break;
+        }
 
     }
 
@@ -71,15 +71,27 @@ export class Listener{
         
         this.obj._target.forEach((target:any) => {
 
-            target.addEventListener("mouseover", (e: any) => {
+            target.addEventListener("mouseover", (e: Event) => {
                 this.action(options)
             });
 
-            target.addEventListener("mouseout", (e: any) => {
+            target.addEventListener("mouseout", (e: Event) => {
                 this.action(options)
             });
 
         });
+        
+    }
+
+    // Scroll
+    private scroll(){
+
+        // get options
+        let options:Scroll = scroll(this.obj.scroll)
+
+        window.addEventListener('scroll', (e: Event) => {
+            this.action(options)
+        })
         
     }
 
@@ -95,7 +107,8 @@ export class Listener{
         })
 
         // toogle end 
-        Toggle(this.obj)
+        this.obj.event != 'scroll'? Toggle(this.obj):this.obj._toggle =1
+
     }
 
 }

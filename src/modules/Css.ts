@@ -3,6 +3,7 @@ import { animes, obj } from "../types"
 export function Css(obj:obj, anime:animes, target:any):void {
 
     let style: any
+    
                 
     for (let i = 0; i < anime.css.length; i++) {
 

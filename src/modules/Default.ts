@@ -1,4 +1,10 @@
-import { Click, Hover, Default, obj } from '../types';
+import { 
+    Click, 
+    Hover, 
+    Scroll, 
+    Default, 
+    obj } 
+from '../types';
 
 export const defaultValue :Default = {
     time     : 0.8,
@@ -43,4 +49,15 @@ export function hover(hover:Hover):Hover {
 
 
     return hover
+}
+
+export function scroll(scroll:Scroll):Scroll {
+
+    // typeof scroll === 'undefined' ? scroll = {
+
+    // } : null
+
+
+
+    return scroll
 }

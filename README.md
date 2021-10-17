@@ -44,14 +44,17 @@ Name object | Info | required
 `animes` | Array of object [animes](#-animes)  | true
 `click` | Object click options  | false
 `hover` | Object hover options | false
+`scroll` | Object scroll options | false
 
 ## 🪄 Options
 ### click
 Name object | Info | Default value
 ------------ | ------------- | -------------
 `toggleOut` | Toggle when click out element | true
-
 ### hover
+Name object | Info | Default value
+------------ | ------------- | -------------
+### scroll
 Name object | Info | Default value
 ------------ | ------------- | -------------
 

@@ -6,7 +6,6 @@ var Select_1 = require("./modules/Select");
 var Default_1 = require("./modules/Default");
 var Listener_1 = require("./modules/Listener");
 var Timeline_1 = require("./modules/Timeline");
-"Une super doc";
 function Magix(obj) {
     // Start init
     init(obj);

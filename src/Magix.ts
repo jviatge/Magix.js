@@ -5,7 +5,7 @@ import { Init } from "./modules/Default";
 import { Listener } from "./modules/Listener";
 import { Timeline } from './modules/Timeline';
 
-"Une super doc"
+
 export function Magix(obj:obj):void{
 
     // Start init
@@ -17,7 +17,7 @@ export function Magix(obj:obj):void{
 }
 
 function init(obj:obj):void{
-
+    
     // Default value
     Init(obj)
 

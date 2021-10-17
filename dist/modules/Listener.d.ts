@@ -5,6 +5,7 @@ export declare class Listener {
     private create;
     private click;
     private hover;
+    private scroll;
     private action;
 }
 //# sourceMappingURL=Listener.d.ts.map

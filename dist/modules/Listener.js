@@ -23,7 +23,7 @@ var Listener = /** @class */ (function () {
             case 'key':
                 break;
             case 'scroll':
-                // https://www.youtube.com/watch?v=55NsKxpUYjQ&t=123s
+                this.scroll();
                 break;
         }
     };
@@ -60,6 +60,15 @@ var Listener = /** @class */ (function () {
             });
         });
     };
+    // Scroll
+    Listener.prototype.scroll = function () {
+        var _this = this;
+        // get options
+        var options = (0, Default_1.scroll)(this.obj.scroll);
+        window.addEventListener('scroll', function (e) {
+            _this.action(options);
+        });
+    };
     Listener.prototype.action = function (options) {
         var _this = this;
         // init order
@@ -70,7 +79,7 @@ var Listener = /** @class */ (function () {
             (0, Action_1.Action)(anime, _this.obj);
         });
         // toogle end 
-        (0, Toggle_1.Toggle)(this.obj);
+        this.obj.event != 'scroll' ? (0, Toggle_1.Toggle)(this.obj) : this.obj._toggle = 1;
     };
     return Listener;
 }());

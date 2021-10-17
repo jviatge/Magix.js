@@ -4,6 +4,7 @@ export declare type obj = {
     // option
     click     : Click
     hover     : Hover
+    scroll    : Scroll
 
     target    : string,
     animes    : Array<animes>,
@@ -50,5 +51,8 @@ export declare type Click = {
     toggleOut : boolean,      
 }
 export declare type Hover = {
+
+}
+export declare type Scroll = {
 
 }

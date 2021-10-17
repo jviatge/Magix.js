@@ -1,3 +1,23 @@
+export declare type obj = {
+    event : 'click' | 'hover' | 'key' | 'scroll' | 'in' | 'out' ;    // hover / key / scroll / in / out
+
+    // option
+    click     : Click
+    hover     : Hover
+
+    target    : string,
+    animes    : Array<animes>,
+
+    _Lineorder: Array<Lineorder>
+    _target   : NodeListOf<HTMLElement>,
+    _init     : boolean,
+    _time     : number,
+    _lastime  : number,
+    _lastorder: number,
+    _toggle   : number,
+    _Allel    : Array<NodeListOf<HTMLElement>>,
+}
+
 export declare type animes = {
     target?    : string,  
     queue      : boolean,
@@ -10,29 +30,7 @@ export declare type animes = {
     _transition: string,
 }
 
-export declare type obj = {
-    event : 'click' | 'hover' | 'key' | 'scroll' | 'in' | 'out' ;    // hover / key / scroll / in / out
-    target: string,
-    option?:{
-        start?: number, 
-        end?  : number
-    }, // default null => start / end / key[]
-    toggleIn  : boolean,       // true / default: false
-    toggleOut : boolean,       // true / default: false
-    animes    : Array<animes>,
-
-    _Lineorder: Array<Lineorder>
-    _target   : NodeListOf<HTMLElement>,
-    _init     : boolean,
-    _time     : number,
-    _lastime  : number,
-    _lastorder: number,
-    _toggle   : number,
-}
-
 export declare type Default = {
-    toggleIn : boolean,       
-    toggleOut: boolean,
     time     : number,             
     order    : number,
     
@@ -44,4 +42,13 @@ export declare type Default = {
 export declare type Lineorder = {
     _order    : number,
     _time     : number,
+}
+
+/* Options */
+export declare type Click = {
+    // toggleIn  : boolean,       
+    toggleOut : boolean,      
+}
+export declare type Hover = {
+
 }

@@ -9,7 +9,6 @@ export function Toggle(obj:obj):void {
     // obj.animes.forEach(anime => {
     //     console.log(Reverse(anime.css, true));
     // });
-    
 
     // SWITCH
     obj._toggle == 1 ? obj._toggle = 0 : obj._toggle = 1 

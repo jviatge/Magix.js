@@ -1,8 +1,6 @@
-import { Default, obj } from '../types';
+import { Click, Hover, Default, obj } from '../types';
 
 export const defaultValue :Default = {
-    toggleIn : false,       
-    toggleOut: false,
     time     : 0.8,
     order    : 0,
     _init    :true,
@@ -10,10 +8,8 @@ export const defaultValue :Default = {
     _time    : 0
 }
 
-export function Init(obj:obj) {
+export function Init(obj:obj):void {
 
-    obj.toggleIn ? defaultValue.toggleIn   = obj.toggleIn : defaultValue.toggleIn  = false
-    obj.toggleOut ? defaultValue.toggleOut = obj.toggleOut: defaultValue.toggleOut = false
     obj._init   = defaultValue._init
     obj._toggle = defaultValue._toggle
     obj._time   = defaultValue._time
@@ -25,4 +21,26 @@ export function Init(obj:obj) {
     });
 
     obj._lastorder = 0    
+}
+
+export function click(click:Click):Click {
+
+    typeof click === 'undefined' ? click = {
+        toggleOut: true
+    } : null
+    
+    click.toggleOut == null ? click.toggleOut = true : null
+
+    return click
+}
+
+export function hover(hover:Hover):Hover {
+
+    // typeof hover === 'undefined' ? hover = {
+
+    // } : null
+
+
+
+    return hover
 }

@@ -1,7 +1,9 @@
-import { obj } from "../types";
+import { Click, Hover, obj } from "../types";
+import { click, hover } from "./Default";
 import { Transition } from "./Transition";
 import { Action } from "./Action";
 import { Toggle } from './Toggle';
+import { toggleOut } from "./Options";
 
 export class Listener{
 
@@ -19,6 +21,7 @@ export class Listener{
             switch (this.obj.event) {
     
                 case 'click':
+
                     this.click()
                     break;
         
@@ -38,33 +41,52 @@ export class Listener{
 
     // Click
     private click(){
+
+        // get options
+        let options:Click = click(this.obj.click)
         
         this.obj._target.forEach((target:any) => {
+
+            
+            
+            if (options.toggleOut) {
+                document.addEventListener('click', (event) => {
+
+                   toggleOut(this.obj, event,() => {
+                        this.action(options)
+                   })
+    
+                });
+            }
             
             target.addEventListener('click',(e: any)=>{ 
-               this.action()
+               this.action(options)
             })
+
         });
     }
 
     // Hover
     private hover(){
+
+        // get options
+        let options:Hover = hover(this.obj.hover)
         
         this.obj._target.forEach((target:any) => {
 
             target.addEventListener("mouseover", (e: any) => {
-                this.action()
+                this.action(options)
             });
 
             target.addEventListener("mouseout", (e: any) => {
-                this.action()
+                this.action(options)
             });
 
         });
         
     }
 
-    private action(){
+    private action(options:Object){
 
         // init order
         this.obj._lastorder = this.obj.animes[0].order

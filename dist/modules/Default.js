@@ -1,9 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Init = exports.defaultValue = void 0;
+exports.hover = exports.click = exports.Init = exports.defaultValue = void 0;
 exports.defaultValue = {
-    toggleIn: false,
-    toggleOut: false,
     time: 0.8,
     order: 0,
     _init: true,
@@ -11,8 +9,6 @@ exports.defaultValue = {
     _time: 0
 };
 function Init(obj) {
-    obj.toggleIn ? exports.defaultValue.toggleIn = obj.toggleIn : exports.defaultValue.toggleIn = false;
-    obj.toggleOut ? exports.defaultValue.toggleOut = obj.toggleOut : exports.defaultValue.toggleOut = false;
     obj._init = exports.defaultValue._init;
     obj._toggle = exports.defaultValue._toggle;
     obj._time = exports.defaultValue._time;
@@ -24,4 +20,18 @@ function Init(obj) {
     obj._lastorder = 0;
 }
 exports.Init = Init;
+function click(click) {
+    typeof click === 'undefined' ? click = {
+        toggleOut: true
+    } : null;
+    click.toggleOut == null ? click.toggleOut = true : null;
+    return click;
+}
+exports.click = click;
+function hover(hover) {
+    // typeof hover === 'undefined' ? hover = {
+    // } : null
+    return hover;
+}
+exports.hover = hover;
 //# sourceMappingURL=Default.js.map

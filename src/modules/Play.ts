@@ -4,6 +4,7 @@ export function Play(obj:obj, init:boolean, anime:animes, action:Function):void 
 
     if (!init) {
 
+        // QUEUE
         if (anime.queue) {
             obj._time += anime.time * 1000
         }

@@ -3,6 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Play = void 0;
 function Play(obj, init, anime, action) {
     if (!init) {
+        // QUEUE
         if (anime.queue) {
             obj._time += anime.time * 1000;
         }

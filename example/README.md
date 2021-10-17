@@ -15,7 +15,7 @@
 Import module:
 
 ```JAVASCRIPT
-import Magix from 'm4gixjs'
+import { Magix } from 'm4gixjs'
 ```
 
 Example basic usage:

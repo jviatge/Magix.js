@@ -1,0 +1,64 @@
+<body class="relative h-screen">
+        
+    <div class="relative w-full bg-red-500 flex justify-between px-8 py-8 text-white">
+        <div>LOGO</div>
+        <div>
+            <a class="mx-4" href="#">Link 1</a>
+            <a class="mx-4" href="#">Link 2</a>
+            <a class="mx-4" href="#">Link 3</a>
+            <a class="mx-4" href="#">Link 4</a>
+        </div>
+        <button id="btnMenu">MENU</button>
+    </div>
+    <div class="absolute bg-red-600 w-full text-white flex opacity-0" id="menuBlock">
+        <ul id="menuText" class="p-8">
+            <li class="link"><a class="mx-4" href="#">Link 1</a></li>
+            <li class="link"><a class="mx-4" href="#">Link 2</a></li>
+            <li class="link"><a class="mx-4" href="#">Link 3</a></li>
+            <li class="link"><a class="mx-4" href="#">Link 4</a></li>
+        </ul>
+    </div>
+
+    <div class="py-5">
+        <h1 class="text-center my-4">Title</h1>
+        <div class="container mx-auto" id="oktest">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque magnam in voluptas placeat ipsam commodi dolorem voluptate fugit sint esse quibusdam similique aut, voluptatum dolor ab nobis? Dolor, excepturi debitis.
+        </div>
+    </div>
+
+</body>
+
+<script>
+
+    Magix({
+        event:'click', // hover
+        target: '#btnMenu',
+        // click:{
+        //     toggleOut: false,
+        // },
+        animes:[
+            {
+                target: '#menuBlock',
+                time   : 0.5,             
+                css : [
+                    'opacity', ['0','1'],
+                    'max-height', ['0px','100%'],
+                ],
+                order: 1
+            },
+            {
+                target: '.link',
+                queue: true,
+                time   : 0.1,             
+                css : [
+                    'visibility', ['hidden','visible'],
+                    'transform', ['translateY(-10px)','translateY(0px)'],
+                    'opacity', ['0','1'],
+                ],
+                order: 2
+            }
+        ],
+    })
+
+</script>
+

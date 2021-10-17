@@ -15,21 +15,19 @@
 Import module:
 
 ```JAVASCRIPT
-import Magix from 'm4gixjs'
+import { Magix } from 'm4gixjs'
 ```
 
 Example basic usage:
 
 ```JAVASCRIPT
 Magix({
-    event:'click',      
-    options:{
-        targets:'#test',
-    }, 
+    event:'click',     
+    target:'#button' 
     animes:[
         {
-            targets:'#test',        
-            actions:{
+            target:'#test',        
+            css:{
                 'background-color':['#00ff0c','#ffff00']
             },
         }
@@ -37,33 +35,36 @@ Magix({
 })
 ```
 
-### 🪄 Base
+## 🪄 Base
 
-Name object | Available | Infos
+Name object | Info | required
 ------------ | ------------- | -------------
-`event` | `click` | #require
-`options` | [options](#-options) |
-`animes` | [animes](#-animes) |
+`event` | Event ('click','hover') | true
+`target` | Dom target event | false
+`animes` | Array of object [animes](#-animes)  | true
+`click` | Object click options  | false
+`hover` | Object hover options | false
 
-### 🪄 options
+## 🪄 Options
+### click
+Name object | Info | Default value
+------------ | ------------- | -------------
+`toggleOut` | Toggle when click out element | true
 
-Name object | Second Header
------------- | -------------
-`targets` | Content from cell 2
-`actions` | Content from cell 2
-`order` | Content from cell 2
-`child` | Content from cell 2
-`targets` | Content from cell 2
+### hover
+Name object | Info | Default value
+------------ | ------------- | -------------
 
-### 🪄 animes
+## 🪄 animes
 
-Name object | Second Header
------------- | -------------
-`targets` | Content from cell 2
-`actions` | Content from cell 2
-`order` | Content from cell 2
-`child` | Content from cell 2
-`targets` | Content from cell 2
-`timer` | Content from cell 2
+Name object | Info | required
+------------ | ------------- | -------------
+`target` | Dom target animation | true
+`css` | Css event | false
+`Class` | class event | false
+`order` | Order timeline animation | false
+`time` | Time of animation | false
+<!-- `child` | Content from cell 2 | false -->
+
 
 

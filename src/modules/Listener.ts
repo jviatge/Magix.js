@@ -47,21 +47,18 @@ export class Listener{
         
         this.obj._target.forEach((target:any) => {
 
-            
-            
+            target.addEventListener('click',(e: any)=>{ 
+                this.action(options)
+             })
+
+            /** OPTION */
             if (options.toggleOut) {
                 document.addEventListener('click', (event) => {
-
                    toggleOut(this.obj, event,() => {
                         this.action(options)
                    })
-    
                 });
             }
-            
-            target.addEventListener('click',(e: any)=>{ 
-               this.action(options)
-            })
 
         });
     }

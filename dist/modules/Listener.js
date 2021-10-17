@@ -33,6 +33,10 @@ var Listener = /** @class */ (function () {
         // get options
         var options = (0, Default_1.click)(this.obj.click);
         this.obj._target.forEach(function (target) {
+            target.addEventListener('click', function (e) {
+                _this.action(options);
+            });
+            /** OPTION */
             if (options.toggleOut) {
                 document.addEventListener('click', function (event) {
                     (0, Options_1.toggleOut)(_this.obj, event, function () {
@@ -40,9 +44,6 @@ var Listener = /** @class */ (function () {
                     });
                 });
             }
-            target.addEventListener('click', function (e) {
-                _this.action(options);
-            });
         });
     };
     // Hover

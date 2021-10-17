@@ -20,7 +20,8 @@ export function Init(obj:obj) {
 
     // animes
     obj.animes.forEach(anime => {
-        !anime.order ? anime.order = 0 : null
+        !anime.order ? anime.order = 0     : null
+        !anime.queue ? anime.queue = false : null
     });
 
     obj._lastorder = 0    

@@ -3,6 +3,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Play = void 0;
 function Play(obj, init, anime, action) {
     if (!init) {
+        if (anime.queue) {
+            obj._time += anime.time * 1000;
+        }
         if (obj._lastorder != anime.order) {
             obj._time += obj._lastime * 1000;
             obj._lastorder = anime.order;

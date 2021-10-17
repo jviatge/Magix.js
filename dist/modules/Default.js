@@ -19,6 +19,7 @@ function Init(obj) {
     // animes
     obj.animes.forEach(function (anime) {
         !anime.order ? anime.order = 0 : null;
+        !anime.queue ? anime.queue = false : null;
     });
     obj._lastorder = 0;
 }

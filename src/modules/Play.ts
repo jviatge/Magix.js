@@ -3,6 +3,10 @@ import { animes, obj } from "../types"
 export function Play(obj:obj, init:boolean, anime:animes, action:Function):void {
 
     if (!init) {
+
+        if (anime.queue) {
+            obj._time += anime.time * 1000
+        }
         
         if (obj._lastorder != anime.order) {
             obj._time += obj._lastime * 1000

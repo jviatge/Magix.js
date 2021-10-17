@@ -1,5 +1,6 @@
 export declare type animes = {
     target?    : string,  
+    queue      : boolean,
     time       : number,             
     css        : Array,
     class      : Array, 
